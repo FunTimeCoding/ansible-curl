@@ -1,1 +1,9 @@
 ---
+- apt:
+    name: curl
+  remote_user: root
+  when: ansible_os_family == 'Debian'
+
+- homebrew:
+    name: curl
+  when: ansible_system == 'Darwin'
